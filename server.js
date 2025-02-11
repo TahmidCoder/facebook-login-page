@@ -52,6 +52,6 @@ io.on("connection", (socket) => {
 });
 
 // Server চালু করা
-server.listen(Port, () => {
+server.listen(Port, "0.0.0.0", () => {
   console.log(`Server running on port ${Port}`);
 });
