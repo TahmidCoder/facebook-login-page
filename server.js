@@ -11,9 +11,14 @@ const server = http.createServer(app);
 const io = socketIo(server);
 const Port = process.env.PORT || 3000;
 // MongoDB এর সাথে কানেক্ট করা
-mongoose.connect(process.env.MONGODB_URL).then(() => {
-  console.log("Connected to MongoDB");
-});
+mongoose
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  });
 
 // MongoDB Schema তৈরি করা
 const formDataSchema = new mongoose.Schema({
