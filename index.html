@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - লগ ইন</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        padding: 20px;
+        max-width: 400px;
+      }
+
+      .facebook-icon {
+        width: 50px;
+        height: 50px;
+        background: #1877f2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+      }
+
+      .facebook-icon::after {
+        content: "f";
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: #1877f2;
+        box-shadow: 0 0 0 2px #e7f3ff;
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 12px;
+        background: #1877f2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .forgot-link {
+        display: block;
+        text-align: center;
+        color: #1877f2;
+        text-decoration: none;
+        font-size: 14px;
+        margin: 15px 0;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 20px 0;
+      }
+
+      .create-account-btn {
+        width: 100%;
+        padding: 12px;
+        background: #42b72a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .meta {
+        margin-top: 20px;
+        color: #777;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .links {
+        margin-top: 10px;
+      }
+
+      .links a {
+        color: #777;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="facebook-icon"></div>
+
+      <input type="text" placeholder="মোবাইল নম্বর বা ইমেইল অ্যাড্রেস" />
+      <input type="password" placeholder="পাসওয়ার্ড" />
+      <button class="login-btn">লগ ইন করুন</button>
+
+      <a href="#" class="forgot-link">পাসওয়ার্ড ভুলে গেছেন?</a>
+
+      <hr />
+
+      <button class="create-account-btn">নতুন অ্যাকাউন্ট তৈরি করুন</button>
+
+      <div class="meta">
+        Meta
+        <div class="links">
+          <a href="#">সম্বন্ধে</a>
+          <span>·</span>
+          <a href="#">সাহায্য</a>
+          <span>·</span>
+          <a href="#">আরও</a>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
